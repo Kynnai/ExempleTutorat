@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DataLayer.Entities;
-using DataLayer.EntityFramework;
 using DataLayer.Interface;
 
 namespace DomainLayer.Tutor
 {
     public class TutorStudentManager // : ITutorStudentManager
     {
-        private IRepository<TutorStudentDal> _tutorRepository;
+        private readonly IRepository<TutorStudentDal> _tutorRepository;
 
-        public TutorStudentManager()
+        public TutorStudentManager(IRepository<TutorStudentDal> repo)
         {
-            _tutorRepository = new EfEntityRepository<TutorStudentDal>(new EfTutoringDbContext());
+            _tutorRepository = repo;
         }
 
         public void RegisterTutor(TutorStudent newTutor)
