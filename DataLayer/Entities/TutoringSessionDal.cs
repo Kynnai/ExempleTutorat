@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region using
+using System;
+#endregion
 
 namespace DataLayer.Entities
 {

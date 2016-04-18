@@ -1,7 +1,9 @@
-﻿using System.Data.Entity;
+﻿#region using
+using System.Data.Entity;
 using DataLayer.Entities;
 using DataLayer.EntityFramework;
 using DataLayer.Interface;
+#endregion
 
 namespace TestUtility
 {

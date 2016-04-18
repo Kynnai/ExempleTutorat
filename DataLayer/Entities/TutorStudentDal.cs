@@ -1,5 +1,6 @@
-﻿
+﻿#region using
 using System.Collections.Generic;
+#endregion
 
 namespace DataLayer.Entities
 {

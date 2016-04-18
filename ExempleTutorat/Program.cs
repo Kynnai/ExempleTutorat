@@ -1,7 +1,9 @@
-﻿using System;
+﻿#region using
+using System;
 using System.Linq;
 using DataLayer.Entities;
 using DataLayer.EntityFramework;
+#endregion
 
 namespace ExempleTutorat
 {

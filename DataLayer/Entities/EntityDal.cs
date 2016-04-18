@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿#region using
+using System.ComponentModel.DataAnnotations;
+#endregion
 
 namespace DataLayer.Entities
 {

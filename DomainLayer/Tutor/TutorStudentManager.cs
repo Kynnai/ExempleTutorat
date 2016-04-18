@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿#region using
+using System.Collections.Generic;
 using System.Linq;
 using DataLayer.Entities;
 using DataLayer.Interface;
+#endregion
 
 namespace DomainLayer.Tutor
 {

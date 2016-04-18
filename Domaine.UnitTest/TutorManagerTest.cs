@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#region using
+using System.Collections.Generic;
 using System.Linq;
 using DataLayer.Entities;
 using DataLayer.Interface;
@@ -6,6 +7,7 @@ using DomainLayer.Tutor;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
+#endregion
 
 namespace Domaine.UnitTest
 {

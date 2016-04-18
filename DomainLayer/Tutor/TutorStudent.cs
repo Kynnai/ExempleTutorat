@@ -1,5 +1,4 @@
 ﻿
-
 namespace DomainLayer.Tutor
 {
     public class TutorStudent

@@ -1,5 +1,7 @@
-﻿using DataLayer.Entities;
+﻿#region using
+using DataLayer.Entities;
 using System.Linq;
+#endregion
 
 namespace DataLayer.Interface
 {
