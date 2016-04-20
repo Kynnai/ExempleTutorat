@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using DataLayer.Entities;
 using DataLayer.Interface;
+using DomainLayer.Mappers;
+
 #endregion
 
 namespace DomainLayer.Tutor
@@ -16,7 +18,11 @@ namespace DomainLayer.Tutor
             _tutorRepository = repo;
         }
 
-        public void RegisterTutor(TutorStudent newTutor)
+        /// <summary>
+        /// Sans mappeur
+        /// </summary>
+        /// <param name="newTutor"></param>
+        /*public void RegisterTutor(TutorStudent newTutor)
         {
             // Validation: matricule unique
             var tutorStudentDal = new TutorStudentDal
@@ -26,6 +32,17 @@ namespace DomainLayer.Tutor
             };
             //Mapping Domain object -- Dal object
             _tutorRepository.Add(tutorStudentDal);
+        }*/
+
+        /// <summary>
+        /// Avec mappeur
+        /// </summary>
+        public void RegisterTutor(TutorStudent newTutor)
+        {
+            // Validation: matricule unique
+            var dal = MapperTutorStudent.Map(newTutor);
+            //Mapping Domain object -- Dal object
+            _tutorRepository.Add(dal);
         }
 
         public IQueryable<TutorStudent> GetAllTutors()

@@ -10,7 +10,7 @@ namespace Tutoring.Views
     {
         private readonly IEnumerable<TutorListVO> _tutorList;
 
-        public TutorListViews(IEnumerable<TutorListVO> tutorList)
+        public TutorListViews(IEnumerable<TutorListVO> tutorList) //en générale: on passe aussi le controleur pour communiquer.
         {
             _tutorList = tutorList;
         }
