@@ -72,6 +72,14 @@
       <Project>{14ac457a-c024-4906-be8c-bac68fc00a3b}</Project>
       <Name>DataLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestUtility\TestUtility.csproj">
+      <Project>{c7c811db-6db6-49a7-85d8-1277dfe22192}</Project>
+      <Name>TestUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tutoring\Tutoring.csproj">
+      <Project>{9c8fb22c-71b2-4cc4-8a9f-d5deeba4cdae}</Project>
+      <Name>Tutoring</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
