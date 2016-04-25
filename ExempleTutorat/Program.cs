@@ -42,8 +42,8 @@ namespace ExempleTutorat
             }
             Console.ReadKey();
 
-            var tutorsList = tutorRepo.GetAll();
-            var tutorsGagnon = tutorsList.Where(t => t.LastName == "Gagnon");
+            //var tutorsList = tutorRepo.GetAll();
+            //var tutorsGagnon = tutorsList.Where(t => t.LastName == "Gagnon");
 
             var tutor3 = new TutorStudentDal()
             {
@@ -52,7 +52,7 @@ namespace ExempleTutorat
             };
             tutorRepo.Add(tutor3);
 
-            var sessionRepo = new EfEntityRepository<TutoringSessionDal>(dbContext);
+            /*var sessionRepo = new EfEntityRepository<TutoringSessionDal>(dbContext);
             var tutor3FromBd = tutorRepo.GetById(tutor3.Id);
             var session1 = new TutoringSessionDal()
             {
@@ -60,15 +60,24 @@ namespace ExempleTutorat
                 LengthSession = 1,
                 TutorStudentDal = tutor3FromBd
             };
-            sessionRepo.Add(session1);
+            sessionRepo.Add(session1);*/
+
+            var appContext = new EfTutoringDbContext();
+            var sessionRepo = new EfEntityRepository<TutoringSessionDal>(appContext);
+            sessionRepo.Add(new TutoringSessionDal()
+            {
+                DateTimeSession = new DateTime(2016, 04, 25, 13, 00, 00),
+                LengthSession = 1,
+                TutorStudentDal = tutorRepo.GetAll().FirstOrDefault(t => t.Number == 99999)
+            });
         }
-        private static void DisplayTutorList(IQueryable<TutorStudentDal> listTutor)
+        /*private static void DisplayTutorList(IQueryable<TutorStudentDal> listTutor)
         {
             Console.WriteLine("Nonbre de tuteurs: " + listTutor.Count());
             foreach (var tutor in listTutor)
             {
                 Console.WriteLine(tutor.Id + " - " + tutor.Number);
             }
-        }
+        }*/
     }
 }
